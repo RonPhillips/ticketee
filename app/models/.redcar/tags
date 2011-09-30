@@ -1,0 +1,4 @@
+1317408774
+Project	/home/rphillips/rails31_projects/ticketee/app/models/project.rb	class Project 
+Ticket	/home/rphillips/rails31_projects/ticketee/app/models/ticket.rb	class Ticket 
+User	/home/rphillips/rails31_projects/ticketee/app/models/user.rb	class User 

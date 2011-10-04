@@ -1,4 +1,4 @@
-1317739747
+1317751468
 ApplicationController	/home/rphillips/rails31_projects/ticketee/app/controllers/application_controller.rb	class ApplicationController 
 ApplicationHelper	/home/rphillips/rails31_projects/ticketee/app/helpers/application_helper.rb	module ApplicationHelper
 Project	/home/rphillips/rails31_projects/ticketee/app/models/project.rb	class Project 
@@ -8,6 +8,7 @@ Ticket	/home/rphillips/rails31_projects/ticketee/app/models/ticket.rb	class Tick
 TicketsController	/home/rphillips/rails31_projects/ticketee/app/controllers/tickets_controller.rb	class TicketsController 
 TicketsHelper	/home/rphillips/rails31_projects/ticketee/app/helpers/tickets_helper.rb	module TicketsHelper
 User	/home/rphillips/rails31_projects/ticketee/app/models/user.rb	class User 
+authorize_admin!	/home/rphillips/rails31_projects/ticketee/app/controllers/application_controller.rb	  def authorize_admin!
 create	/home/rphillips/rails31_projects/ticketee/app/controllers/projects_controller.rb	  def create
 create	/home/rphillips/rails31_projects/ticketee/app/controllers/tickets_controller.rb	  def create
 destroy	/home/rphillips/rails31_projects/ticketee/app/controllers/projects_controller.rb	  def destroy

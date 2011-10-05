@@ -1,4 +1,4 @@
-1317822485
+1317824598
 ApplicationController	/home/rphillips/rails31_projects/ticketee/app/controllers/application_controller.rb	class ApplicationController 
 ApplicationHelper	/home/rphillips/rails31_projects/ticketee/app/helpers/application_helper.rb	module ApplicationHelper
 BaseController	/home/rphillips/rails31_projects/ticketee/app/controllers/admin/base_controller.rb	class Admin::BaseController 
@@ -18,20 +18,25 @@ create	/home/rphillips/rails31_projects/ticketee/app/controllers/projects_contro
 create	/home/rphillips/rails31_projects/ticketee/app/controllers/tickets_controller.rb	  def create
 destroy	/home/rphillips/rails31_projects/ticketee/app/controllers/projects_controller.rb	  def destroy
 destroy	/home/rphillips/rails31_projects/ticketee/app/controllers/tickets_controller.rb	  def destroy
+edit	/home/rphillips/rails31_projects/ticketee/app/controllers/admin/users_controller.rb	  def edit
 edit	/home/rphillips/rails31_projects/ticketee/app/controllers/projects_controller.rb	  def edit
 edit	/home/rphillips/rails31_projects/ticketee/app/controllers/tickets_controller.rb	  def edit
 find_project	/home/rphillips/rails31_projects/ticketee/app/controllers/projects_controller.rb	  def find_project
 find_project	/home/rphillips/rails31_projects/ticketee/app/controllers/tickets_controller.rb	  def find_project
 find_ticket	/home/rphillips/rails31_projects/ticketee/app/controllers/tickets_controller.rb	  def find_ticket
+find_user	/home/rphillips/rails31_projects/ticketee/app/controllers/admin/users_controller.rb	  def find_user
 index	/home/rphillips/rails31_projects/ticketee/app/controllers/admin/base_controller.rb	  def index
 index	/home/rphillips/rails31_projects/ticketee/app/controllers/admin/users_controller.rb	  def index
 index	/home/rphillips/rails31_projects/ticketee/app/controllers/projects_controller.rb	  def index
 new	/home/rphillips/rails31_projects/ticketee/app/controllers/admin/users_controller.rb	  def new
 new	/home/rphillips/rails31_projects/ticketee/app/controllers/projects_controller.rb	  def new
 new	/home/rphillips/rails31_projects/ticketee/app/controllers/tickets_controller.rb	  def new 
+set_admin	/home/rphillips/rails31_projects/ticketee/app/controllers/admin/users_controller.rb	  def set_admin
+show	/home/rphillips/rails31_projects/ticketee/app/controllers/admin/users_controller.rb	  def show
 show	/home/rphillips/rails31_projects/ticketee/app/controllers/projects_controller.rb	  def show
 show	/home/rphillips/rails31_projects/ticketee/app/controllers/tickets_controller.rb	  def show
 title	/home/rphillips/rails31_projects/ticketee/app/helpers/application_helper.rb	  def title(*parts)
 to_s	/home/rphillips/rails31_projects/ticketee/app/models/user.rb	  def to_s
+update	/home/rphillips/rails31_projects/ticketee/app/controllers/admin/users_controller.rb	  def update
 update	/home/rphillips/rails31_projects/ticketee/app/controllers/projects_controller.rb	  def update
 update	/home/rphillips/rails31_projects/ticketee/app/controllers/tickets_controller.rb	  def update

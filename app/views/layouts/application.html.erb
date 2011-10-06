@@ -1,0 +1,35 @@
+<html>
+  <head>
+  <title>
+    <% if content_for?(:title) %>
+      <%= yield(:title) %>
+    <%else%>
+      Ticketee
+    <%end%>
+  </title>
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <% flash.each do |key, value| %>
+      <div class='flash' id='<%= key %>'>
+        <%= value %>
+      </div>
+    <% end %> 
+    <h1><%= link_to "Ticketee", root_path %></h1>
+    <nav>
+      <%= admins_only do%>
+        <%=link_to "Admin", admin_root_path %>
+      <% end %>
+      
+      <%if user_signed_in? %>
+        Signed in as <%= current_user.email %>
+      <% else %>
+        <%= link_to "Sign up", new_user_registration_path %>
+        <%= link_to "Sign in", new_user_session_path %>
+      <% end %>
+    </nav>
+    <%= yield %>
+  </body>
+</html>

@@ -13,6 +13,7 @@ Feature: Deleting tickets
             | title | description |
             | Make it shiny! | Gradients! Starbursts! Oh my! |
         And "user@ticketee.com" can view the "TextMate 2" project
+        And "user@ticketee.com" can delete tickets in the "TextMate 2" project
         Given I am on the homepage
         When I follow "TextMate 2"
         And I follow "Make it shiny!"
@@ -21,3 +22,5 @@ Feature: Deleting tickets
         When I follow "Delete Ticket"
         Then I should see "Ticket has been deleted."
         And I should be on the project page for "TextMate 2"
+        
+

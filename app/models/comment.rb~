@@ -1,5 +1,6 @@
 class Comment < ActiveRecord::Base
   after_create :set_ticket_state
+  
 
   belongs_to :ticket
   belongs_to :user

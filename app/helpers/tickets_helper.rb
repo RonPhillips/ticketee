@@ -3,9 +3,9 @@ module TicketsHelper
     content_tag(:div, :class => "states") do
       if comment.state
         if comment.previous_state && comment.state != comment.previous_state
-        "#{render comment.previous_state} &rarr; #{render comment.state}".html_safe
+          "#{render comment.previous_state} &rarr; #{render comment.state}".html_safe
         else
-        "&rarr;" + render(comment.state)
+          "&rarr; #{render(comment.state)}".html_safe
         end
       end
     end

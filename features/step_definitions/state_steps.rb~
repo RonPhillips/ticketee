@@ -1,0 +1,7 @@
+Given /^there is a state called "([^"]*)"$/ do |name|
+  State.create!(:name=>name)
+end
+When /^I follow "([^"]*)" for the "([^"]*)" state$/ do |arg1, arg2|
+  pending # express the regexp above with the code you wish you had
+end
+

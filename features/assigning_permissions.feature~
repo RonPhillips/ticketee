@@ -19,7 +19,6 @@ Feature: Assigning permissions
         And I follow "Users"
         And I follow "user@ticketee.com"
         And I follow "Permissions"
-        Given there is a state called "Open"
     
     Scenario: Viewing a project
         When I check "View" for "TextMate 2"

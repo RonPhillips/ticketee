@@ -18,7 +18,6 @@ Feature: Creating comments
         Given there is a state called "Open"
     
     Scenario: Creating a comment
-        #Then show me the page
         When I follow "Change a ticket's state"
         And I fill in "Text" with "Added a comment!"
         And I press "Create Comment"
@@ -32,12 +31,16 @@ Feature: Creating comments
         And I should see "Text can't be blank"
         
     Scenario: Changing a ticket's state
+        Given "user@ticketee.com" can change states on the "Ticketee" project
         When I follow "Change a ticket's state"
         When I fill in "Text" with "This is a real issue"
         And I select "Open" from "State"
         And I press "Create Comment"
         Then I should see "Comment has been created."
         And I should see "Open" within "#ticket .state"
-        #Then show me the page
         Then I should see "Open" within "#comments"
+        
+    Scenario: A user without permission cannot change the state
+        When I follow "Change a ticket's state"
+        Then I should not see the "#comment_state_id" element
         

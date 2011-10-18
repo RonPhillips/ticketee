@@ -18,7 +18,6 @@ Feature: Creating comments
         Given there is a state called "Open"
     
     Scenario: Creating a comment
-        #Then show me the page
         When I follow "Change a ticket's state"
         And I fill in "Text" with "Added a comment!"
         And I press "Create Comment"
@@ -38,6 +37,9 @@ Feature: Creating comments
         And I press "Create Comment"
         Then I should see "Comment has been created."
         And I should see "Open" within "#ticket .state"
-        Then show me the page
-        Then I should see "State: Open" within "#comments"
+        Then I should see "Open" within "#comments"
+        
+    Scenario: A user without permission cannot change the state
+        When I follow "Change a ticket's state"
+        Then I should not see the "#comment_state_id" element
         

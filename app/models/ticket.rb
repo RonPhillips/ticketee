@@ -15,9 +15,11 @@ class Ticket < ActiveRecord::Base
     :length => {:minimum=>10}
     
   def tag!(tags)
-    tags = tags.split(" ").map do |tag|
-      Tag.find_or_create_by_name(tag)
+    unless tags.nil?
+      tags = tags.split(" ").map do |tag|
+        Tag.find_or_create_by_name(tag)
+      end
+      self.tags << tags
     end
-    self.tags << tags
   end
 end

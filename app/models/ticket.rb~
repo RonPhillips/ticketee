@@ -13,4 +13,13 @@ class Ticket < ActiveRecord::Base
   validates :title, :presence=>true
   validates :description, :presence=>true,
     :length => {:minimum=>10}
+    
+  def tag!(tags)
+    if tags.respond_to?('split')
+      tags = tags.split(" ").map do |tag|
+        Tag.find_or_create_by_name(tag)
+      end
+      self.tags << tags
+    end
+  end
 end

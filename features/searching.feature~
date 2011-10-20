@@ -25,3 +25,9 @@ Feature: Searching
     And I press "Search"
     Then I should see "Tag!"
     And I should not see "Tagged!"
+    
+  Scenario: Finding by state
+    When I fill in "Search" with "state:Open"
+    And I press "Search"
+    Then I should see "Tag!"
+    And I should not see "Tagged!"

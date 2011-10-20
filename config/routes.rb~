@@ -23,6 +23,11 @@ Ticketee::Application.routes.draw do
   end
   resources :tickets do
     resources :comments
+    resources :tags do
+      member do
+        delete :remove
+      end
+    end
   end
   resources :files
   # Sample resource route with options:
@@ -62,7 +67,11 @@ Ticketee::Application.routes.draw do
 	  resources :users do
 	    resources :permissions
     end
-    resources :states
+    resources :states do
+      member do
+        get :make_default
+      end
+    end
   end
   
 

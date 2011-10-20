@@ -19,10 +19,21 @@ Ticketee::Application.routes.draw do
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
   resources :projects do
-	  resources :tickets
+    resources :tickets do
+      collection do
+        get :search
+      end
+    end
   end
+  
+  
   resources :tickets do
     resources :comments
+    resources :tags do
+      member do
+        delete :remove
+      end
+    end
   end
   resources :files
   # Sample resource route with options:

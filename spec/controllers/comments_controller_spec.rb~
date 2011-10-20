@@ -9,7 +9,6 @@ describe CommentsController do
             :user => user)
   end
   let(:state) { State.create!(:name => "New") }
-  let(:tags) " "
   
   context "a user without permission to set state" do
     before do

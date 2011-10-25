@@ -9,7 +9,7 @@
   <br><small>Created by <%= @ticket.user.email %></small>
   <%= render @ticket.state if @ticket.state %>
   <%= simple_format(@ticket.description) %>
-
+  <div id='tags'><%= render @ticket.tags %></div>
   <% if @ticket.assets.exists? %>
     <h3>Attached Files</h3>
     <div class="assets">
@@ -23,6 +23,14 @@
     <% end %>
     </div>
   <% end %>
+</div>
+<div id='watchers'>
+  <h4>Watchers</h4>
+  <ul>
+  <% @ticket.watchers.each do |watcher| %>
+    <li><%= watcher %></li>
+  <% end %>
+  </ul>
 </div>
 <h3>Comments</h3>
 <div id='comments'>
